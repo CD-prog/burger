@@ -1,8 +1,16 @@
 var express = require("express");
 
 var router = express.Router();
-var cat = require("../models/burger.js");
+var burger = require("../models/burger");
 
-
+router.get("/", function(req, res) {
+    burger.selectAll(function(data) {
+      var hbsObject = {
+        burger: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
+  });
 
 module.exports = router;
