@@ -1,18 +1,39 @@
-<h1>Not Devoured Burgers</h1>
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-    <div>{{burger_name}}</div>
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="container-fluid header">
+    <img src="/assets/img/burger.jpeg" style="height:250px"alt="burger" class="img-fluid  mx-auto d-block burger-pic" />
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h2><br>Burgers Ready To Eat</h2>
+      <ul>
+        {{#each burger}}
+        {{#unless devoured}}
+        <div>
+          {{burger_name}}
+          <button class="btn btn-outline-danger btn-sm" id="{{id}}">Devour It! </button>
+        </div>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-6 text-center">
+      <h2><br>Devoured Burgers</h2>
+      <ul>
+        {{#each burger}}
+        {{#if devoured}}
+        <div>{{burger_name}}</div>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+ <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Add a new burger to be devoured" aria-label="newBurger" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-danger" type="button">Add To List</button>
+  </div>
+</div>
 
-<h1>Devoured Burgers</h1>
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-    <div>{{burger_name}}</div>
-    {{/if}}
-  {{/each}}
-</ul>
-
+</div>
