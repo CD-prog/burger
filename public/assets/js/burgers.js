@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $(function() {
     $(".devour-btn").on("click", function(event) { 
         var id = `${this.id}`
@@ -11,7 +12,7 @@ $(function() {
       });  
 })
 
-$("#addBtn").on("click", function(event) {
+$("#add-btn").on("click", function(event) {
     event.preventDefault();
     var newBurger = {
       burger_name: $("#burger-name").val().trim()
@@ -26,3 +27,5 @@ $("#addBtn").on("click", function(event) {
       }
     );
   });
+})
+
