@@ -6,11 +6,11 @@
     <div class="col-md-6 text-center">
       <h2><br>Burgers Ready To Eat</h2>
       <ul>
-        {{#each burger}}
+        {{#each burgers}}
         {{#unless devoured}}
         <div>
           {{burger_name}}
-          <button class="btn btn-outline-danger btn-sm" id="{{id}}">Devour It! </button>
+          <button class="devour-btn btn btn-outline-danger btn-sm" id="{{id}}">Devour It! </button>
         </div>
         {{/unless}}
         {{/each}}
@@ -19,7 +19,7 @@
     <div class="col-md-6 text-center">
       <h2><br>Devoured Burgers</h2>
       <ul>
-        {{#each burger}}
+        {{#each burgers}}
         {{#if devoured}}
         <div>{{burger_name}}</div>
         {{/if}}
@@ -30,10 +30,13 @@
   <br>
   <br>
  <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Add a new burger to be devoured" aria-label="newBurger" aria-describedby="basic-addon2">
+
+  <input type="text" class="form-control" placeholder="Add a new burger to be devoured" id="burger-name" name="burger_name">
+
   <div class="input-group-append">
-    <button class="btn btn-danger" type="button">Add To List</button>
+    <button class="add-btn btn btn-danger" type="button">Add To List</button>
   </div>
 </div>
+
 
 </div>
