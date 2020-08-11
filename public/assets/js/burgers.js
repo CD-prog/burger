@@ -11,13 +11,11 @@ $(function() {
       });  
 })
 
-$(".add-btn").on("click", function(event) {
+$("#addBtn").on("click", function(event) {
     event.preventDefault();
     var newBurger = {
       burger_name: $("#burger-name").val().trim()
     };
-    console.log(newBurger)
-
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger

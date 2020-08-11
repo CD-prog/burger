@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 text-center">
-      <h2><br>Burgers Ready To Eat</h2>
+      <h2>Burgers Ready To Eat</h2>
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
@@ -17,7 +17,7 @@
       </ul>
     </div>
     <div class="col-md-6 text-center">
-      <h2><br>Devoured Burgers</h2>
+      <h2>Devoured Burgers</h2>
       <ul>
         {{#each burgers}}
         {{#if devoured}}
@@ -28,15 +28,13 @@
     </div>
   </div>
   <br>
-  <br>
- <div class="input-group mb-3">
-
-  <input type="text" class="form-control" placeholder="Add a new burger to be devoured" id="burger-name" name="burger_name">
-
-  <div class="input-group-append">
-    <button class="add-btn btn btn-danger" type="button">Add To List</button>
+ 
+<form class="form-inline">
+  
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" style="width:400px" id="burger-name" name="burger_name" placeholder="Burger To Be Devoured">
   </div>
-</div>
-
+  <button id="addBtn" type="submit" class=" btn btn-danger mb-2">Add New Burger</button>
+</form>
 
 </div>
